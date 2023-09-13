@@ -29,6 +29,6 @@ for nj = 1 : length(sizes)
     fprintf('n = %d, tlap = %f, reslap = %e\n', ...
         nn, tlap, reslap);
 
-    dlmwrite('test8.dat', [ sizes(:), data ], '\t');
+    dlmwrite('test_table5_dst.dat', [ sizes(:), data ], '\t');
     
 end

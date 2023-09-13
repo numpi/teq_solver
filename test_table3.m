@@ -36,5 +36,5 @@ for nj = 1 : length(sizes)
         fprintf('    DAC, time = %f, res = %e, bs = %d \n', tdac, resdac, bs(bsj));       
     end
 
-    dlmwrite('test2_2D.dat', [ sizes(:), data ], '\t');
+    dlmwrite('test_table3.dat', [ sizes(:), data ], '\t');
 end

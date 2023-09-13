@@ -42,7 +42,7 @@ for nj = 1 : length(sizes)
         end
     end
 
-    dlmwrite('test1_2D.dat', [ sizes(:), data ], '\t');
+    dlmwrite('test_table1.dat', [ sizes(:), data ], '\t');
     
 end
 

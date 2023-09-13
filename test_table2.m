@@ -42,7 +42,7 @@ for nj = 1 : length(sizes)
         end
     end
 
-    dlmwrite('test1_2D_bis.dat', [ sizes(:), data ], '\t');
+    dlmwrite('test_table2.dat', [ sizes(:), data ], '\t');
 end
 
 data = generate_latex_histogram2('test1_2D_bis_met=adi_hist', [4096, 8192, 16384]);

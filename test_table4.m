@@ -26,7 +26,7 @@ for nj = 1 : length(sizes)
 	% Divide-and-conquer solvers
     for bsj = 1:length(bs)        
         tdac = tic;
-        [XDAC, timedata] = dac_lyapnd(A, -C, 'nmin', bs(bsj), 'sA', sA, 'low_rank_solver', 'ek', 'tol', 1e-8, 'timedata', zeros(4, 1), 'spd_split', true);
+        [XDAC, timedata] = dac_lyapnd(A, -C, 'nmin', bs(bsj), 'sA', sA, 'low_rank_solver', 'adi', 'tol', 1e-8, 'timedata', zeros(4, 1), 'spd_split', true);
         tdac = toc(tdac);
         [~, resdac] = compute_residual(A, XDAC, C);
         if bs(bsj) < size(A{1}, 1)
@@ -36,5 +36,5 @@ for nj = 1 : length(sizes)
         fprintf('    DAC, time = %f, res = %e, bs = %d \n', tdac, resdac, bs(bsj));       
     end
 
-    dlmwrite('test3_2D.dat', [ sizes(:), data ], '\t');
+    dlmwrite('test_table4.dat', [ sizes(:), data ], '\t');
 end
